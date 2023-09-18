@@ -1,0 +1,277 @@
+/* Dành cho điện thoại */
+@media all and (max-width: 425px) {
+    .tvcp-gallery-all {
+        display: none;
+    }
+
+    .tvcp-dangnhap {
+        width: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    /* Trang chủ */
+    .tvcp-function {
+        display: none;
+    }
+
+    .tvcp-search {
+        display: none;
+    }
+
+    .tvcp-data-folder-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .tvcp-data-item {
+        padding: 10px 3px;
+    }
+
+    .tvcp-list-data {
+        margin-bottom: 70%;
+    }
+
+    .tvcp-add-new {
+        display: none;
+    }
+
+    .tvcp-function-mobile {
+        display: block;
+        position: fixed;
+        top: 95%;
+    }
+
+    .tvcp-addNew-mobile {
+        display: block;
+    }
+
+    .tvcp-rotate-yourphone {
+        display: block;
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+
+    .tvcp-rotate-title {
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 50px;
+        color: white;
+        font-weight: 600;
+    }
+
+    #main-fluid {
+        display: none;
+    }
+}
+
+@media all and (min-width: 1250px) and (max-width:1299px) {
+    .tvcp-logo-img {
+        width: 140px;
+    }
+
+    .tvcp-gallery-item {
+        width: 155px;
+        margin: 20px 20px;
+    }
+
+    .tvcp-gallery {
+        padding: 30px 25px;
+    }
+}
+
+@media all and (min-width: 1300px) and (max-width:1349px) {
+    .tvcp-logo-img {
+        width: 140px;
+    }
+
+    .tvcp-gallery-item {
+        width: 160px;
+        margin: 20px 20px;
+    }
+
+    .tvcp-gallery {
+        padding: 30px 35px;
+    }
+}
+
+@media all and (min-width: 1350px) and (max-width:1399px) {
+
+    .tvcp-gallery-item {
+        width: 165px;
+        margin: 20px 20px;
+    }
+
+    .tvcp-gallery {
+        padding: 0 40px;
+    }
+}
+
+@media all and (min-width: 1400px) and (max-width:1449px) {
+    .tvcp-logo-img {
+        width: 140px;
+    }
+
+    .tvcp-gallery-item {
+        width: 170px;
+        margin: 20px 20px;
+    }
+
+    .tvcp-gallery {
+        padding: 30px 40px;
+    }
+}
+
+@media all and (min-width: 1450px) and (max-width:1499px) {
+    .tvcp-logo-img {
+        width: 140px;
+    }
+
+    .tvcp-gallery-item {
+        width: 175px;
+        margin: 20px 20px;
+    }
+
+    .tvcp-gallery {
+        padding: 30px 50px;
+    }
+}
+
+@media all and (min-width: 1500px) and (max-width:1540px) {
+    .tvcp-logo-img {
+        width: 140px;
+    }
+
+    .tvcp-gallery-item {
+        width: 200px;
+        margin: 15px 15px;
+    }
+
+    .tvcp-gallery {
+        padding: 0px 30px;
+    }
+}
+
+@media all and (min-width: 1550px) and (max-width:1590px) {
+    .tvcp-logo-img {
+        width: 140px;
+    }
+
+    .tvcp-gallery-item {
+        width: 179px;
+        margin: 20px 20px;
+    }
+
+    .tvcp-gallery {
+        padding: 30px 80px;
+    }
+}
+
+
+@media all and (max-width: 812px) {
+    .tvcp-list-item{
+        padding:15px 10px;
+        font-size:12px;
+    }
+    .tvcp-logout-list{
+        font-size:12px;
+    }
+    .tvcp-search-box{
+        width:360px;
+    }
+    .search-input{
+        font-size:12px;
+    }
+    .tvcp-header span{
+        font-size:12px;
+    }
+    .tvcp-main-data{
+        font-size:12px;
+    }
+    .tvcp-button-arrangeChange{
+        display: none;
+    }
+    .tvcp-button-arrange{
+        display: none;
+    }
+    #rotate-mobile{
+        font-size:12px !important;
+    }
+    .tvcp-addNew-mobile{
+        display: block;
+    }
+    .tvcp-data-item{
+        padding:10px 10px;
+    }
+    .tvcp-data-folder-img{
+        width:60px;
+        height: 60px;
+    }
+    .tvcp-list-data{
+        margin-bottom:200px;
+    }
+}
+
+@media all and (min-width: 1590px) and (max-width:1730px) {
+    .tvcp-logo-img {
+        width: 140px;
+    }
+
+    .tvcp-gallery-item {
+        width: 215px;
+    }
+
+}
+@media all and (min-width: 1745px) and (max-width:1790px) {
+    .tvcp-logo-img {
+        width: 140px;
+    }
+
+    .tvcp-gallery-item {
+        width: 222px;
+    }
+
+}
+@media all and (min-width: 1800px) and (max-width:2030px) {
+    .tvcp-logo-img {
+        width: 140px;
+    }
+
+    .tvcp-gallery-item {
+        width: 240px;
+    }
+
+}
+@media all and (min-width: 2035px) and (max-width:2130px) {
+    .tvcp-logo-img {
+        width: 140px;
+    }
+
+    .tvcp-gallery-item {
+        width: 270px;
+    }
+
+}
+@media all and (min-width: 2133px) and (max-width:2150px) {
+    .tvcp-logo-img {
+        width: 140px;
+    }
+
+    .tvcp-gallery-item {
+        width: 280px;
+    }
+
+}
+/* 
+@media all and (max-width: 1920px) {
+    .tvcp-logo-img{
+        width: 140px;
+    }
+    .tvcp-gallery-item{
+        width: 250px;
+    }
+} */

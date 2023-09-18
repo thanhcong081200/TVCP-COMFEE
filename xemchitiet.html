@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href='https://fonts.googleapis.com/css?family=Cambo' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="reponsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<style>
+  body {
+    background-color: rgb(245, 243, 243) !important;
+  }
+
+  .swal-title {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    color: rgba(27, 27, 27, 0.64) !important;
+  }
+
+  .modal-dialog {
+    max-width: unset !important;
+    width: 800px;
+  }
+</style>
+
+<body>
+  <div class="tvcp-rotate-yourphone" style="background-color: black;">
+    <img style="width:100%;" src="/giphy.gif" alt="">
+    <div class="tvcp-rotate-title">Quay điện thoại trạng thái nằm ngang !</div>
+  </div>
+  <div class="container-fluid" id="main-fluid" style="height:100%;padding:unset;">
+    <div class="container" style="max-width:1600px;height: 100%;">
+      <div class="row">
+        <div class="tvcp-header">
+          <div class="tvcp-logo">
+            <img class="tvcp-img" src="/logo.png" alt="">
+            <span>COMFEE VIETNAM</span>
+          </div>
+          <div class="tvcp-search">
+            <div class="tvcp-search-box">
+              <input class="search-input" type="text" placeholder="Tìm kiếm dữ liệu theo tên khu vực & tên shop.....">
+              <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+          </div>
+          <div class="tvcp-account">
+            <div>
+              <span>Dương Thanh Công</span>
+            </div>
+            <div>
+              <i class="fa-solid fa-user"></i>
+            </div>
+          </div>
+          <div class="tvcp-account-logout">
+            <ul class="tvcp-logout-list">
+              <li class="tvcp-logout-item">Thông tin tài khoản</li>
+              <a style="text-decoration: none; color:black;" href="dangnhap.html">
+                <li class="tvcp-logout-item">Đăng xuất</li>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="height:100%;">
+        <div class="col-md-2" style="padding:unset;">
+          <div class="tvcp-function">
+            <ul class="tvcp-list">
+              <a href="trangchu.html" style="text-decoration: none;color:unset;">
+                <li class="tvcp-list-item">
+                  <i class="fa-solid fa-folder-closed"></i> &nbsp;
+                  <span>Tệp của tôi</span>
+                </li>
+              </a>
+              <li class="tvcp-list-item"><i class="fa-solid fa-users"></i> &nbsp;
+                Được chia sẻ với tôi
+              </li>
+              <a href="hinhanh.html" style="text-decoration: none;color:unset;">
+                <li class="tvcp-list-item"><i class="fa-solid fa-image"></i> &nbsp;
+                  Hình ảnh
+                </li>
+              </a>
+              <a href="thungrac.html" style="text-decoration: none;color:unset;">
+                <li class="tvcp-list-item"><i class="fa-solid fa-trash-can"></i> &nbsp;
+                  Thùng rác
+                </li>
+              </a>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-10" style="padding:0 40px;">
+          <div class="tvcp-main-data">
+            <div class="tvcp-add-new">
+              <div>
+                <a href="trangchu.html">Trang chủ </a> &nbsp; / &nbsp;<a href="tepcon.html">Mark</a> &nbsp; / &nbsp;
+                <a>Trà Vinh</a>
+              </div>
+              <div>
+                <!-- Xuất file Excel -->
+                <span class="tvcp-button-exportFile">
+                  <i class="fa-solid fa-download"></i>
+                  Xuất file Excel
+                </span>
+                &nbsp;
+  
+  
+                <!-- Tải hình,... lên -->
+                <!-- <span class="tvcp-button-uploadFile" data-toggle="modal" data-target="#exampleModalCenter">
+                  <i class="fa-solid fa-arrow-up-from-bracket"></i> &nbsp;
+                  Nhập thông tin mới
+                </span> -->
+  
+                <!-- Sắp xếp danh sách -->
+                <span class="tvcp-button-arrange">
+                  <i class="fa-solid fa-arrow-up-wide-short"></i> &nbsp;
+                  Sắp xếp &nbsp;
+                  <i class="fa-solid fa-chevron-down"></i>
+                </span>
+                <ul class="tvcp-arrange-list">
+                  <li class="tvcp-arrange-list-item">Đã sửa đổi gần nhất</li>
+                  <li class="tvcp-arrange-list-item">Kích thước thư mục</li>
+                  <li class="dropdown-divider"></li>
+                  <li class="tvcp-arrange-list-item">Sắp xếp từ A-Z</li>
+                  <li class="tvcp-arrange-list-item">Sắp xếp từ Z-A</li>
+                </ul>
+  
+                &nbsp;
+  
+                <!-- Thay đổi danh sách-->
+                <span class="tvcp-button-arrangeChange">
+                  <i class="fa-solid fa-list"></i> &nbsp;
+                  <i class="fa-solid fa-chevron-down"></i>
+                </span>
+                <ul class="tvcp-arrange-listChange">
+                  <li class="tvcp-arrange-listChange-item"><i class="fa-solid fa-table-cells-large"></i></li>
+                  <li class="tvcp-arrange-listChange-item"><i class="fa-solid fa-bars-staggered"></i></li>
+                  <li class="tvcp-arrange-listChange-item"><i class="fa-solid fa-table-list"></i></li>
+                </ul>
+              </div>
+            </div>
+            <br>
+  
+            <!-- Thông tin thị trường -->
+            <div class="tvcp-xemchitiet">
+              <br>
+              <h5><b>1. THÔNG TIN THỊ TRƯỜNG</b></h5>
+              <br>
+              <table class="table table-bordered" style="text-align: center;">
+                <thead>
+                  <tr>
+                    <th class="table-th" scope="col" style="width:60px;">STT</th>
+                    <th class="table-th" scope="col" style="width:150px;">Khu vực</th>
+                    <th class="table-th" scope="col" style="width:150px;">Tên cửa hàng</th>
+                    <th class="table-th" scope="col" style="width:150px;">Họ tên</th>
+                    <th class="table-th" scope="col" style="width:150px;">Trưng bày</th>
+                    <th class="table-th" scope="col" style="width:150px;">Thông tin thị trường</th>
+                    <th class="table-th" scope="col" style="width:10px;"><i class="fa-solid fa-gear"></i></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th class="table-th" scope="row">1</th>
+                    <td class="table-td">Trà Vinh</td>
+                    <td class="table-td">ĐMX Châu Thành - thị trấn Châu Thành, Trà Vinh</td>
+                    <td class="table-td">Lương Tấn Đạt</td>
+                    <td class="table-td" style="width:300px;">1. CFS -10VDGF - V : 7.390.000
+                      2. CFS -13VDGF - V : 8.390.000
+                      3. CFS -18VDGF - V: 11.290.000"
+                    </td>
+                    <td class="table-td" style="width:400px">- Không cho chụp hình bảng giá tại siêu thị
+                      - Phản hồi có nhân viên đã từng xài dòng Comfee TQ lắp nhà trọ, máy xài ok.
+                      - Dòng Comfee Thái hàng mới về 1HP, còn 1.5HP chưa có hàng
+                      - Không rành về kiến thức sản phẩm của hãng, chưa biết sản phẩm mới là của Thái Lan"
+                    </td>
+                    <td class="table-function">
+                      <span class="tvcp-button-updateFile" title="Chỉnh sửa file" data-toggle="modal"
+                        data-target="#chinhsuaThongtin">
+                        <i class="fa-solid fa-pen"></i>
+                      </span>
+                      <hr>
+                      <span class="tvcp-button-deleteFile" title="Xóa file">
+                        <i class="fa-solid fa-trash-can"></i>
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+  
+            <br>
+            <!-- Hình ảnh thị trường -->
+            <div class="tvcp-xemhinhanh">
+              <h5><b>2. HÌNH ẢNH THỊ TRƯỜNG</b></h5>
+              <div class="tvcp-chitiet-hinhanh">
+                <div class="tvcp-chitiet-hinhanh-list">
+                  <img id="myImg" class="tvcp-chitiet-hinhanh-item" src="/h1.jpg" alt="Trước cửa hàng">
+                </div>
+                <div class="tvcp-chitiet-hinhanh-list">
+                  <img class="tvcp-chitiet-hinhanh-item" src="/h2.jpg" alt="">
+                </div>
+                <div class="tvcp-chitiet-hinhanh-list">
+                  <img class="tvcp-chitiet-hinhanh-item" src="/h3.jpg" alt="">
+                </div>
+                <div class="tvcp-chitiet-hinhanh-list">
+                  <img class="tvcp-chitiet-hinhanh-item" src="/h4.jpg" alt="">
+                </div>
+                <div class="tvcp-chitiet-hinhanh-list">
+                  <img class="tvcp-chitiet-hinhanh-item" src="/h5.jpg" alt="">
+                </div>
+                <div class="tvcp-chitiet-hinhanh-list">
+                  <img class="tvcp-chitiet-hinhanh-item" src="/h6.jpg" alt="">
+                </div>
+                <div class="tvcp-chitiet-hinhanh-list">
+                  <img class="tvcp-chitiet-hinhanh-item" src="/h7.jpg" alt="">
+                </div>
+                <div class="tvcp-chitiet-hinhanh-list">
+                  <img class="tvcp-chitiet-hinhanh-item" src="/h8.jpg" alt="">
+                </div>
+                <div class="tvcp-chitiet-hinhanh-list">
+                  <img class="tvcp-chitiet-hinhanh-item" src="/h9.jpg" alt="">
+                </div>
+                <div class="tvcp-chitiet-hinhanh-list">
+                  <img class="tvcp-chitiet-hinhanh-item" src="/h10.jpg" alt="">
+                </div>
+                <div class="tvcp-chitiet-hinhanh-list">
+                  <img class="tvcp-chitiet-hinhanh-item" src="/h11.jpg" alt="">
+                </div>
+                <div class="tvcp-chitiet-hinhanh-list">
+                  <img class="tvcp-chitiet-hinhanh-item" src="/h12.jpg" alt="">
+                </div>
+                <div class="tvcp-chitiet-hinhanh-list">
+                  <img class="tvcp-chitiet-hinhanh-item" src="/h13.jpg" alt="">
+                </div>
+                <div class="tvcp-chitiet-hinhanh-list">
+                  <img class="tvcp-chitiet-hinhanh-item" src="/h14.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <!-- Modal hìnhh ảnh -->
+    <!-- <div id="myModal" class="modal1">
+      <span class="close1">&times;</span>
+      <img class="modal-content1" id="img01">
+      <div id="caption"></div>
+    </div> -->
+
+    <!-- Modal gọi khi bấm nút CHỈNH SỬA THÔNG TIN -->
+    <div class="modal fade" id="chinhsuaThongtin" style="width:100%;" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="border:none;background-color: #80BAE8;">
+            <h5 class="modal-title" id="exampleModalLongTitle" style="color:white;">Chỉnh sửa thông tin thị trường</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true"><i style="color:red;" class="fa-solid fa-rectangle-xmark"></i></span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col">
+                <b>Tên khu vực</b><br>
+                <input type="text" class="form-control" id="rotate-mobile" style="width:100%;" placeholder="Trà Vinh"><br>
+              </div>
+              <div class="col">
+                <b>Tên cửa hàng</b><br>
+                <input type="text" class="form-control" id="rotate-mobile" style="width:100%;"
+                  placeholder="ĐMX Châu Thành - thị trấn Châu Thành, Trà Vinh"><br>
+              </div>
+              <div class="col">
+                <b>Tên của bạn</b><br>
+                <input type="text" class="form-control" id="rotate-mobile" style="width:100%;" placeholder="Lương Tấn Đạt"><br>
+              </div>
+            </div>
+            <b>Trưng bày sản phẩm Comfee</b><br>
+            <textarea class="form-control" id="rotate-mobile" cols="30" rows="5" placeholder="
+                        1. CFS -10VDGF - V : 7.390.000
+                        2. CFS -13VDGF - V : 8.390.000
+                        3. CFS -18VDGF - V: 11.290.000"></textarea><br>
+            <b>Thông tin thị trường</b><br>
+            <textarea class="form-control" id="rotate-mobile" cols="30" rows="7" placeholder="Hàng không có sẵn, nếu đặt hàng thì 1 ngày sau có hàng
+                    - Giá km 7.390.000- Hãng sẵn tại kho loại 1hp
+                    - Check web mới tư vấn
+                    - Có biết kết nối bằng giọng nói
+                    - Xuất xứ Thái Lan
+                    - Ctkm giảm 600k , miễn phí công và vật tư lắp đặt
+                    - Chưa hiểu sâu về sp
+                    - Tư vấn phẩm cùng phân khúc thương hiệu casper, samsung"></textarea>
+          </div>
+          <div class="modal-footer" style="border:none;">
+            <button type="button" class="btn btn-primary" style="width:100px;">Cập nhật</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+    <!-- <script>
+      var modal = document.getElementById("myModal");
+      var img = document.getElementById("myImg");
+      var modalImg = document.getElementById("img01");
+      var captionText = document.getElementById("caption");
+      img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      }
+
+      var span = document.getElementsByClassName("close1")[0];
+      span.onclick = function() { 
+        modal.style.display = "none";
+      }
+      </script> -->
+
+  <script>
+    // Click sắp xếp
+    $(document).ready(function () {
+      $(".tvcp-button-arrange").click(function (event) {
+        event.stopPropagation();
+        $(".tvcp-arrange-list").addClass("show");
+      });
+      $(".tvcp-arrange-list").on("click", function (event) {
+        event.stopPropagation();
+      });
+    });
+    // Bấm ra ngoài
+    $(document).ready(function () {
+      $(".tvcp-button-arrangeChange").click(function (event) {
+        event.stopPropagation();
+        $(".tvcp-arrange-list").removeClass("show");
+      });
+    });
+    $(document).on("click", function () {
+      $(".tvcp-arrange-list").removeClass("show");
+    });
+
+    // Click thay đổi giao diện
+    $(document).ready(function () {
+      $(".tvcp-button-arrangeChange").click(function (event) {
+        event.stopPropagation();
+        $(".tvcp-arrange-listChange").addClass("show-listChange");
+      });
+      $(".tvcp-arrange-listChange").on("click", function (event) {
+        event.stopPropagation();
+      });
+    });
+    // Bấm ra ngoài
+    $(document).ready(function () {
+      $(".tvcp-button-arrange").click(function (event) {
+        event.stopPropagation();
+        $(".tvcp-arrange-listChange").removeClass("show-listChange");
+      });
+    });
+    $(document).on("click", function () {
+      $(".tvcp-arrange-listChange").removeClass("show-listChange");
+    });
+
+
+    // Click hồ sơ tài khoản giao diện
+    $(document).ready(function () {
+      $(".tvcp-account").click(function (event) {
+        event.stopPropagation();
+        $(".tvcp-account-logout").addClass("show-account");
+      });
+      $(".tvcp-logout-list").on("click", function (event) {
+        event.stopPropagation();
+      });
+    });
+
+    // // Bấm ra ngoài
+    $(document).ready(function () {
+      $(".tvcp-account-logout").click(function (event) {
+        event.stopPropagation();
+        $(".tvcp-account-logout").removeClass("show-account");
+      });
+    });
+    $(document).on("click", function () {
+      $(".tvcp-account-logout").removeClass("show-account");
+    });
+
+
+    // ALert xóa file
+    $(document).ready(function () {
+      $('.tvcp-button-deleteFile').click(function () {
+        swal({
+          title: "Bạn có muốn xóa file này không ?",
+          icon: "warning",
+          buttons: true,
+        })
+          .then((willDelete) => {
+            if (willDelete) {
+              swal("File bạn chọn đã được xóa thành công !", {
+                icon: "success",
+              });
+            }
+          });
+      });
+    })
+
+  </script>
+</body>
+
+</html>

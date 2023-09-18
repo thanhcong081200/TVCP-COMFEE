@@ -1,0 +1,82 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+.tvcp-background-dangnhap{
+    background-color: #80BAE8;
+}
+.tvcp-gallery{
+    width:65%;
+    background-color: white;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    /* padding:40px 30px; */
+}
+
+.tvcp-gallery-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+.tvcp-gallery-item{
+    width:250px;
+    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.14), 0px 0px 2px rgba(0, 0, 0, 0.12);
+    margin:15px 25px;
+}
+.tvcp-logo-dangnhap{
+    text-align: center;
+}
+.tvcp-form-dangnhap{
+    position: relative;
+    padding:0 20px;
+}
+.tvcp-logo-img{
+    border-radius:50%;
+    width: 170px;
+    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.14), 0px 0px 2px rgba(0, 0, 0, 0.12);
+}
+.padding-bottom{
+    padding-bottom: 25px;
+}
+.tvcp-dangnhap{
+    width:25%;
+    background-color: white;
+    top: 10%;
+    right: 5%;
+    bottom: 10%;
+    position: fixed;
+    padding:15px 25px;
+}
+.tvcp-background-tailieuhuongdan{
+    background-color: white;
+}
+.xem-giadung{
+    visibility: hidden;
+    transition: all .3s linear;
+    height:0px;
+}
+.xem-giadung-show{
+    visibility: visible;
+    transition: all .3s linear;
+    height: 500px;
+    padding: 20px 0px;
+    color: #777;
+}
+.xem-maylanh{
+    visibility: hidden;
+    transition: all .3s linear;
+    height:0px;
+}
+.xem-maylanh-show{
+    visibility: visible;
+    transition: all .3s linear;
+    height: 30px;
+    padding: 14px 0px;
+    color: #777;
+}

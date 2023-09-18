@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href='https://fonts.googleapis.com/css?family=Cambo' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="reponsive.css">
+  <link rel="stylesheet" href="jstable.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<style>
+  body {
+    background-color: rgb(245, 243, 243) !important;
+  }
+
+  .swal-title {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    color: rgba(27, 27, 27, 0.64) !important;
+  }
+</style>
+
+<body>
+  <div class="container-fluid" style="height:100%;padding:unset;">
+    <div class="container" style="max-width:1600px;height:100%;">
+      <div class="row">
+        <div class="tvcp-header">
+          <div class="tvcp-logo">
+            <img class="tvcp-img" src="/logo.png" alt="">
+            <span>COMFEE VIETNAM</span>
+          </div>
+          <div class="tvcp-search">
+            <div class="tvcp-search-box">
+              <input class="search-input" type="text" placeholder="Tìm kiếm dữ liệu..">
+              <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+          </div>
+          <div class="tvcp-account">
+            <div>
+              <span>Dương Thanh Công</span>
+            </div>
+            <div>
+              <i class="fa-solid fa-user"></i>
+            </div>
+          </div>
+          <div class="tvcp-account-logout">
+            <ul class="tvcp-logout-list">
+              <li class="tvcp-logout-item">Thông tin tài khoản</li>
+              <a style="text-decoration: none; color:black;" href="dangnhap.html">
+                <li class="tvcp-logout-item">Đăng xuất</li>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="height:100%;">
+        <div class="col-md-2" style="padding:unset;">
+          <div class="tvcp-function">
+            <ul class="tvcp-list">
+              <a href="trangchu.html" style="text-decoration: none;color:unset;">
+                <li class="tvcp-list-item">
+                  <i class="fa-solid fa-folder-closed"></i> &nbsp;
+                  <span>Tệp của tôi</span>
+                </li>
+              </a>
+              <li class="tvcp-list-item"><i class="fa-solid fa-users"></i> &nbsp;
+                Được chia sẻ với tôi
+              </li>
+              <a href="hinhanh.html" style="text-decoration: none;color:unset;">
+                <li class="tvcp-list-item"><i class="fa-solid fa-image"></i> &nbsp;
+                  Hình ảnh
+                </li>
+              </a>
+              <a href="thungrac.html" style="text-decoration: none;color:unset;">
+                <li class="tvcp-list-item"><i class="fa-solid fa-trash-can"></i> &nbsp;
+                  Thùng rác
+                </li>
+              </a>
+              <li></li>
+            </ul>
+          </div>
+  
+          <!-- For mobile -->
+          <div class="tvcp-function-mobile">
+            <div class="tvcp-list-mobile">
+              <div class="tvcp-list-item-mobile">
+                <i class="fa-solid fa-folder-closed"></i> &nbsp;
+              </div>
+              <div class="tvcp-list-item-mobile"><i class="fa-solid fa-users"></i> &nbsp;
+              </div>
+              <div class="tvcp-list-item-mobile"><i class="fa-solid fa-image"></i> &nbsp;
+              </div>
+              <div class="tvcp-list-item-mobile"><i class="fa-solid fa-trash-can"></i> &nbsp;
+              </div>
+            </div>
+          </div>
+          <div class="tvcp-addNew-mobile" data-toggle="modal" data-target="#exampleModalCenter">
+            <!-- Thêm thư mục mới -->
+            <span class="tvcp-button-addNew-mobile">
+              <i class="fa-solid fa-folder-plus"></i>
+            </span>
+          </div>
+        </div>
+        <div class="col-md-10" style="padding:0 40px;">
+          <div class="tvcp-main-data">
+            <table id="example" class="table-hover" style="text-align: center;">
+                <thead>
+                  <tr>
+                    <th>Tên cửa hàng</th>
+                    <th>Khu vực</th>
+                    <th>Tỉnh / Thành phố</th>
+                    <th>Number</th>
+                    <th>Sotry</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Rhona Carey</td>
+                    <td>Northern Mariana Islands</td>
+                    <td>2020-03-12 03:47:43</td>
+                    <td>9769</td>
+                    <td>9769</td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Carey</td>
+                    <td>Northern Mariana Islands</td>
+                    <td>2020-03-12 03:47:43</td>
+                    <td>9768</td>
+                    <td>9768</td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Carey</td>
+                    <td>Northern Mariana Islands</td>
+                    <td>2020-03-12 03:47:43</td>
+                    <td>9767</td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Carey</td>
+                    <td>Northern Mariana Islands</td>
+                    <td>2020-03-12 03:47:43</td>
+                    <td>9766</td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Carey</td>
+                    <td>Northern Mariana Islands</td>
+                    <td>2020-03-12 03:47:43</td>
+                    <td>9765</td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Carey</td>
+                    <td>Northern Mariana Islands</td>
+                    <td>2020-03-12 03:47:43</td>
+                    <td>9764</td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Carey</td>
+                    <td>Northern Mariana Islands</td>
+                    <td>2020-03-12 03:47:43</td>
+                    <td>9762</td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Carey</td>
+                    <td>Northern Mariana Islands</td>
+                    <td>2020-03-12 03:47:43</td>
+                    <td>9763</td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Carey</td>
+                    <td>Northern Mariana Islands</td>
+                    <td>2020-03-12 03:47:43</td>
+                    <td>9763</td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Carey</td>
+                    <td>Northern Mariana Islands</td>
+                    <td>2020-03-12 03:47:43</td>
+                    <td>9763</td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Carey</td>
+                    <td>Northern Mariana Islands</td>
+                    <td>2020-03-12 03:47:43</td>
+                    <td>9763</td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Carey</td>
+                    <td>Northern Mariana Islands</td>
+                    <td>2020-03-12 03:47:43</td>
+                    <td>9763</td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Carey</td>
+                    <td>Northern Mariana Islands</td>
+                    <td>2020-03-12 03:47:43</td>
+                    <td>9763</td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Carey</td>
+                    <td>Northern Mariana Islands</td>
+                    <td>2020-03-12 03:47:43</td>
+                    <td>9763</td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Carey</td>
+                    <td>Northern Mariana Islands</td>
+                    <td>2020-03-12 03:47:43</td>
+                    <td>9763</td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Carey</td>
+                    <td>Northern Mariana Islands</td>
+                    <td>2020-03-12 03:47:43</td>
+                    <td>9763</td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Carey</td>
+                    <td>Northern Mariana Islands</td>
+                    <td>2020-03-12 03:47:43</td>
+                    <td>9763</td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Carey</td>
+                    <td>Northern Mariana Islands</td>
+                    <td>2020-03-12 03:47:43</td>
+                    <td>9763</td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Carey</td>
+                    <td>Northern Mariana Islands</td>
+                    <td>2020-03-12 03:47:43</td>
+                    <td>9763</td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Carey</td>
+                    <td>Northern Mariana Islands</td>
+                    <td>2020-03-12 03:47:43</td>
+                    <td>9763</td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Carey</td>
+                    <td>Northern Mariana Islands</td>
+                    <td>2020-03-12 03:47:43</td>
+                    <td>9763</td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Carey</td>
+                    <td>Northern Mariana Islands</td>
+                    <td>2020-03-12 03:47:43</td>
+                    <td>9763</td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Carey</td>
+                    <td>Northern Mariana Islands</td>
+                    <td>2020-03-12 03:47:43</td>
+                    <td>9763</td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Carey</td>
+                    <td>Northern Mariana Islands</td>
+                    <td>2020-03-12 03:47:43</td>
+                    <td>9763</td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+    <!-- Modal gọi khi bấm nút THÊM THƯ MỤC-->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="border:none;background-color: #80BAE8;">
+            <h5 class="modal-title" id="exampleModalLongTitle" style="color:white;">Tạo thư mục</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true"><i style="color:red;" class="fa-solid fa-rectangle-xmark"></i></span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <input type="text" class="form-control" style="width:100%;" placeholder="Nhập tên thư mục của bạn...">
+          </div>
+          <div class="modal-footer" style="border:none;">
+            <button type="button" class="btn btn-primary" style="width:100px;">Tạo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+    <!-- JS Data Table -->
+  <script src="jstable.min.js"></script>
+
+ <script>
+    new JSTable("#example", {
+      serverSide: false,
+      deferLoading: 1000,
+      ajax: 'data.json', 
+      ajaxParams: {
+        // ajax params here
+      },
+      perPage: 5,
+    perPageSelect: [5, 10, 15, 20, 25],
+    nextPrev: true,
+    firstLast: false,
+    prevText: "&lsaquo;",
+    nextText: "&rsaquo;",
+    firstText: "&laquo;",
+    lastText: "&raquo;",
+    ellipsisText: "&hellip;",
+    truncatePager: true,
+    pagerDelta: 2,
+    labels: {
+      placeholder: "Search...",
+      perPage: "{select} entries per page",
+      noRows: "No entries found",
+      info: "Showing {start} to {end} of {rows} entries",
+      loading: "Loading...",
+      infoFiltered: "Showing {start} to {end} of {rows} entries (filtered from {rowsTotal} entries)"
+    },
+    }
+);
+ </script>
+  <script>
+    // Click sắp xếp
+    $(document).ready(function () {
+      $(".tvcp-button-arrange").click(function (event) {
+        event.stopPropagation();
+        $(".tvcp-arrange-list").addClass("show");
+      });
+      $(".tvcp-arrange-list").on("click", function (event) {
+        event.stopPropagation();
+      });
+    });
+    // Bấm ra ngoài
+    $(document).ready(function () {
+      $(".tvcp-button-arrangeChange").click(function (event) {
+        event.stopPropagation();
+        $(".tvcp-arrange-list").removeClass("show");
+      });
+    });
+    $(document).on("click", function () {
+      $(".tvcp-arrange-list").removeClass("show");
+    });
+
+    // Click thay đổi giao diện
+    $(document).ready(function () {
+      $(".tvcp-button-arrangeChange").click(function (event) {
+        event.stopPropagation();
+        $(".tvcp-arrange-listChange").addClass("show-listChange");
+      });
+      $(".tvcp-arrange-listChange").on("click", function (event) {
+        event.stopPropagation();
+      });
+    });
+    // Bấm ra ngoài
+    $(document).ready(function () {
+      $(".tvcp-button-arrange").click(function (event) {
+        event.stopPropagation();
+        $(".tvcp-arrange-listChange").removeClass("show-listChange");
+      });
+    });
+    $(document).on("click", function () {
+      $(".tvcp-arrange-listChange").removeClass("show-listChange");
+    });
+
+
+    // Click hồ sơ tài khoản giao diện
+    $(document).ready(function () {
+      $(".tvcp-account").click(function (event) {
+        event.stopPropagation();
+        $(".tvcp-account-logout").addClass("show-account");
+      });
+      $(".tvcp-logout-list").on("click", function (event) {
+        event.stopPropagation();
+      });
+    });
+
+    // // Bấm ra ngoài
+    $(document).ready(function () {
+      $(".tvcp-account-logout").click(function (event) {
+        event.stopPropagation();
+        $(".tvcp-account-logout").removeClass("show-account");
+      });
+    });
+    $(document).on("click", function () {
+      $(".tvcp-account-logout").removeClass("show-account");
+    });
+
+
+    // ALert xóa file
+    $(document).ready(function () {
+      $('.tvcp-button-deleteFile').click(function () {
+        swal({
+          title: "Bạn có muốn xóa file này không ?",
+          icon: "warning",
+          buttons: true,
+        })
+          .then((willDelete) => {
+            if (willDelete) {
+              swal("File bạn chọn đã được xóa thành công !", {
+                icon: "success",
+              });
+            }
+          });
+      });
+    })
+
+  </script>
+</body>
+
+</html>

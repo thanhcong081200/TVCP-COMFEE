@@ -1,0 +1,657 @@
+/* Modal */
+.modal-backdrop {
+  top: -20px !important;
+}
+
+.modal-header button {
+  outline: none !important;
+}
+
+.modal-dialog {
+  top: -40px !important;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+/* tvcp-header */
+.tvcp-header {
+  width: 100%;
+  /* height:100%; */
+  position: fixed;
+  background-color: #80BAE8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1;
+  top:0;
+  left:0;
+}
+
+.tvcp-logo {
+  display: flex;
+  align-items: center;
+}
+
+.tvcp-logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.tvcp-logo span {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+.tvcp-search-box {
+  width: 500px;
+  position: relative;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.search-input {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px 45px 10px 10px;
+  background-color: #eaeaeb;
+  color: #6c6c6c;
+  border-radius: 6px;
+  border: none;
+  transition: all .4s;
+}
+
+.search-input:focus {
+  border: none;
+  outline: none;
+  box-shadow: 0 1px 12px #b8c6db;
+  -moz-box-shadow: 0 1px 12px #b8c6db;
+  -webkit-box-shadow: 0 1px 12px #b8c6db;
+}
+
+.search-btn {
+  background-color: transparent;
+  font-size: 18px;
+  padding: 6px 9px;
+  margin-left: -45px;
+  border: none;
+  color: #6c6c6c;
+  transition: all .4s;
+  z-index: 10;
+}
+
+.search-btn:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  color: black;
+}
+
+.search-btn:focus {
+  outline: none;
+  color: black;
+}
+
+.tvcp-account {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 200px;
+}
+
+.tvcp-account span {
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.tvcp-account i {
+  color: white;
+  font-weight: bold;
+}
+
+.tvcp-account:hover {
+  background-color: #51a7ed;
+  padding: 10px 0px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.tvcp-account-logout {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background: white;
+  right: 15px;
+  top: 30px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 0px 2px rgba(0, 0, 0, 0.12);
+  visibility: hidden;
+}
+
+.show-account {
+  visibility: visible;
+  transform: translateY(20px);
+  transition: all 0.3s linear;
+}
+
+.tvcp-logout-list {
+  padding: 6px 5px;
+  list-style: none;
+
+}
+
+.tvcp-logout-item {
+  padding: 10px 20px;
+}
+
+.tvcp-logout-item:hover {
+  background-color: #EBEBEB;
+  cursor: pointer;
+}
+
+/* tvcp-function */
+.active {
+  border-left: 20px solid #80BAE8;
+}
+
+.tvcp-function {
+  width: 230px;
+  border-right: 1px solid #EBEBEB;
+  margin: auto;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 0px 2px rgba(0, 0, 0, 0.12);
+  position: fixed;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  /* right: 0; */
+}
+.tvcp-rotate-yourphone{
+  display: none;
+}
+.tvcp-rotate-title{
+  display: none;
+}
+.tvcp-addNew-mobile{
+  display: none;
+}
+.tvcp-function-mobile{
+  position: fixed;
+  top:60%;
+  left:0;
+  /* bottom: 0; */
+  right:0;
+  z-index: 1;
+  width: 100%;
+  background-color: white;
+  padding:10px 20px;
+  display: none;
+}
+
+.tvcp-list {
+  list-style: none;
+  padding: 20px 0;
+}
+.tvcp-list-mobile{
+  display: flex;
+  justify-content: space-around;
+}
+
+.tvcp-addNew-mobile{
+  position: fixed;
+  top: 50%;
+  right: 0px;
+  width: 60px;
+  height: 60px;
+  background: #80BAE8;
+  border-radius: 50%;
+  font-size: 30px;
+  text-align: center;
+  line-height: 1.9;
+  color: white;
+  z-index: 2;
+}
+
+.tvcp-list-item {
+  padding: 15px 20px;
+  font-size: 15px;
+  color: rgb(36, 36, 36);
+  transform: translateX(1px);
+  transition: all .3s linear;
+}
+
+.tvcp-list-item:hover {
+  background-color: #EBEBEB;
+  cursor: pointer;
+  border-left: 20px solid #80BAE8;
+  transform: translateX(1px);
+  transition: all .3s linear;
+}
+
+/* tvcp-add-new */
+.tvcp-main-data {
+  position: relative;
+  top: 60px;
+}
+
+.tvcp-add-new {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #EBEBEB;
+  padding: 20px 15px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 0px 2px rgba(0, 0, 0, 0.12);
+}
+
+.tvcp-button-addNew {
+  background-color: #80BAE8;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.tvcp-button-addNew:hover {
+  background-color: #51a7ed;
+  cursor: pointer;
+}
+
+/* Tải file lên */
+.tvcp-button-uploadFile {
+  padding-left: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #EBEBEB;
+}
+
+.tvcp-button-uploadFile:hover {
+  background-color: #cecdcd;
+  cursor: pointer;
+}
+
+/* Xuất file */
+.tvcp-button-exportFile {
+  padding-left: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #80BAE8;
+  color: white;
+}
+
+.tvcp-button-exportFile:hover {
+  background-color: #51a7ed;
+  cursor: pointer;
+}
+
+/* Chỉnh sửa file */
+.tvcp-button-updateFile {
+  padding-left: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #fbff00;
+  color: white;
+}
+
+.tvcp-button-updateFile:hover {
+  background-color: #d8d515;
+  cursor: pointer;
+}
+
+/* Xóa file */
+.tvcp-button-deleteFile {
+  padding-left: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #f54702;
+  color: white;
+}
+
+.tvcp-button-deleteFile:hover {
+  background-color: #bb291e;
+  cursor: pointer;
+}
+
+/* Chi tiết file */
+.tvcp-button-descFile {
+  padding-left: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #80BAE8;
+  color: white;
+}
+
+.tvcp-button-descFile:hover {
+  background-color: #51a7ed;
+  cursor: pointer;
+}
+
+.tvcp-button-arrange {
+  padding-left: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #EBEBEB;
+}
+
+.tvcp-button-arrange:hover {
+  background-color: #cecdcd;
+  cursor: pointer;
+}
+
+/* Danh sách sắp xếp */
+.tvcp-arrange-list {
+  padding: 10px 5px;
+  list-style: none;
+  background: white;
+  height: 210px;
+  width: 200px;
+  position: absolute;
+  visibility: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 0px 2px rgba(0, 0, 0, 0.12);
+  transform: translateY(0px);
+  right: 50px;
+}
+
+.show {
+  visibility: visible;
+  transform: translateY(20px);
+  transition: all 0.3s linear;
+}
+
+.tvcp-arrange-list-item {
+  padding: 10px 15px;
+}
+
+.tvcp-arrange-list-item:hover {
+  background-color: #EBEBEB;
+  cursor: pointer;
+}
+
+.tvcp-button-arrangeChange {
+  padding-left: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #EBEBEB;
+}
+
+.tvcp-button-arrangeChange:hover {
+  background-color: #cecdcd;
+  cursor: pointer;
+}
+
+/* Danh sách thay đổi giao diện */
+.tvcp-arrange-listChange {
+  padding: 10px 5px;
+  list-style: none;
+  background: white;
+  height: 150px;
+  width: 75px;
+  position: absolute;
+  right: 14px;
+  visibility: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 0px 2px rgba(0, 0, 0, 0.12);
+  transform: translateY(0px);
+  text-align: center;
+}
+
+.show-listChange {
+  visibility: visible;
+  transform: translateY(20px);
+  transition: all 0.3s linear;
+  z-index: 1;
+}
+
+.tvcp-arrange-listChange-item {
+  padding: 10px 15px;
+}
+
+.tvcp-arrange-listChange-item:hover {
+  background-color: #EBEBEB;
+  cursor: pointer;
+}
+
+/* .tvcp-list-data{
+    width: 100%;
+    max-height: 400px;
+    overflow-y: scroll;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 0px 2px rgba(0, 0, 0, 0.12);
+  }
+  .tvcp-data-table::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+} */
+
+.tvcp-data-table::-webkit-scrollbar-thumb {
+  background-color: #c2c2c2;
+}
+
+.tvcp-active-file-choose {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+/* Table data */
+.tvcp-list-data-item {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom:30px;
+}
+
+.tvcp-data-item {
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.tvcp-data-item:hover {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 0px 2px rgba(0, 0, 0, 0.12);
+  background-color: #e8e5e5;
+  cursor: pointer;
+}
+
+.show{
+  display: block;
+  z-index: 1;
+}
+
+/* asd */
+.tvcp-img-item {
+  padding: 10px 20px;
+}
+.tvcp-img-hover{
+  width:250px;
+  /* height:100%; */
+  height: 300px;
+  position: absolute;
+  visibility: hidden;
+  transition: all .3s linear;
+}
+.tvcp-img-item:hover .tvcp-img-hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all .3s linear;
+    visibility: visible;
+}
+.tvcp-select-item{
+  position: absolute;
+  visibility: hidden;
+  transition: all .3s linear;
+  text-align: center;
+  margin: -200px 55px;
+    transform: translateY(0px);
+}
+.tvcp-select-item-main{
+  width: 100%;
+  background-color: #51a7ed;
+  padding: 5px 0;
+  margin: 10px 0;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+}
+.tvcp-select-item-option{
+  padding:10px 40px;
+}
+.tvcp-img-item:hover .tvcp-select-item{
+    visibility: visible;
+    transition: all .3s ease-in-out;
+    transform: translateY(-15px);
+}
+
+
+.tvcp-data-folder-img {
+  width: 100px;
+  height: 100px;
+}
+
+.tvcp-img-src{
+  width: 250px;
+  height: 300px;
+}
+
+.tvcp-data-folder-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 111px;
+  margin:auto;
+}
+
+.tvcp-data-folder-time {
+  font-size: 13px;
+}
+
+.tvcp-pagination {
+  position: absolute;
+  bottom: 5%;
+  right: 25%;
+  left: 25%;
+}
+
+.table-td,
+.table-th {
+  vertical-align: middle !important;
+  white-space: pre-line;
+}
+
+table {
+  border-collapse: collapse !important; 
+  border:1px solid #000000 !important;
+} 
+table td{
+  border:1px solid #000000 !important;
+}
+table th{
+ border:1px solid #000000 !important;
+}
+
+.table-function{
+  vertical-align: middle !important;
+}
+
+
+/* Trang xem chi tiết */
+.tvcp-xemchitiet{
+  width: 100%;
+}
+.tvcp-chitiet-hinhanh{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tvcp-chitiet-hinhanh-list{
+  padding:20px 20px;
+}
+.tvcp-chitiet-hinhanh-item{
+  width:300px;
+  height:300px;
+}
+
+.tvcp-activities{
+  width:100%;
+  height:100px;
+  border-radius:10px;
+  background-color: #80BAE8;
+  padding:12px 20px;
+  color:white;
+  font-weight: 600;
+}
+.tvcp-count{
+  font-size: 35px;
+}
+/* .table-data{
+  width: 100%;
+  height:500px;
+  max-height:600px;
+  overflow-y: scroll;
+} */
+
+.tvcp-dashboard{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tvcp-search-nguoidung{
+  width: 500px;
+  position: relative;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.search-input-nguoidung {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px 45px 10px 10px;
+  background-color: #eaeaeb;
+  color: #6c6c6c;
+  border-radius: 6px;
+  border: none;
+  transition: all .4s;
+}
+
+.search-input-nguoidung:focus {
+  border: none;
+  outline: none;
+  box-shadow: 0 1px 12px #b8c6db;
+  -moz-box-shadow: 0 1px 12px #b8c6db;
+  -webkit-box-shadow: 0 1px 12px #b8c6db;
+}
+
+
+/* Upload hình ảnh */
+#result{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  max-height: 500px;
+}
+.tvcp-box{
+  margin-top:10px;
+  width: 200px;
+  padding:15px 10px;
+}
+.thumbnail{
+  width: 100%;
+}
+.tvcp-box:hover{
+  cursor: pointer;
+  background-color:#89c6f8;
+  z-index: 1;
+  border-radius: 5px;
+}
